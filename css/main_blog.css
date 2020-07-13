@@ -31,6 +31,27 @@ h1 {color: blue;}
 #footer {
     grid-area: ft;
 }
+#content{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "post post";
+}
+.post {
+    width: 500px;
+    height: 150px;
+}
+.post { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: baseline;
+    border: 3px solid black;
+    padding: 3px;
+    margin: auto;
+    background: green;
+}
 @media (min-width: 600px) and (max-width: 900px) {
 #container {
     display: grid;

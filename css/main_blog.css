@@ -39,7 +39,6 @@ h1 {color: blue;}
     "post post";
 }
 .post {
-    grid-area: post;
     width: 500px;
     height: 150px;
 }

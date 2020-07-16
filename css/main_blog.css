@@ -1,7 +1,7 @@
 h1 {color: rgb(0, 0, 0);}
 h2 {
-    margin: auto;
-    padding-bottom: 20%;
+}
+h3 {
 }
 #container { /*settings for grid*/
     display: grid;
@@ -33,16 +33,14 @@ h2 {
 }
 #content {
     grid-area: main;
-}
-#footer {
-    grid-area: ft;
-}
-#content{
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto;
     grid-template-areas: 
     "post post";
+}
+#footer {
+    grid-area: ft;
 }
 .post {
     width: 500px;

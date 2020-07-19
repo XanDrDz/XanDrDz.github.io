@@ -1,12 +1,8 @@
-h1 {color: rgb(0, 0, 0);}
-h2 {
-}
-h3 {
-}
-#container { /*settings for grid*/
+/* For narrow screens */
+#container {
     display: grid;
     grid-template-columns: 150px 150px 150px;
-    grid-template-rows: 250px 600px; 
+    grid-template-rows: 100px 300px; 
     grid-template-areas: 
     "hd"
     "sd"
@@ -14,8 +10,37 @@ h3 {
     "ft";
     border: 3px solid black;
 }
+h1 {
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+}
+h2 {
+    font-size: 14px;
+    text-align: center;
+}
+h3 {
+    margin: 0px;
+    padding-right: 70%;
+    padding-top: 10px;
+    height: 5px;
+    font-size: 7px;
+}
+input {
+    margin: auto;
+    background-color: rgb(43, 214, 226);
+    -moz-border-radius:  5px; /* Firefox */
+    -webkit-border-radius:  5px; /* Safari 4 */
+    border-radius:  5px; /* IE 9, Safari 5, Chrome */
+}
+p {
+    text-align: center;
+    font-size: 10px;
+}
+span {
+    text-decoration: underline;
+}
 .box {
-    border: 3px solid black;
+    border: 1.5px solid black;
     background-color: rgb(0, 225, 255);
 }
 #header {
@@ -30,34 +55,43 @@ h3 {
 }
 #sidebar {
     grid-area: sd;
+    text-align: center;
 }
 #content {
     grid-area: main;
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    grid-template-areas: 
-    "post post";
+    display:flex;
+    flex-direction: column;
+    align-items: auto;
+    justify-content: space-around;
+    font-size: auto;
+    flex-wrap: wrap;
 }
 #footer {
     grid-area: ft;
-}
-.post {
-    width: 500px;
-    height: 150px;
+    padding-left: 4px;
+    font-size: 10px;
 }
 .post { 
     display: flex;
     flex-direction: column;
-    align-items:flex-end;
-    justify-content: flex-end;
-    border: 3px solid black;
+    align-items:center;
+    justify-content: center;
+    border: 1.5px solid black;
     padding: auto;
     margin: auto;
     background: rgb(255, 187, 0);
+    width: 130px;
+    height: 130px;
+    box-shadow: 0 -120px 100px -120px crimson inset;
+    animation: background 3s infinite alternate;
 }
+.ref {
+    padding-left: 70%;
+    font-size: 7px;
+}
+/* For middle screens */
 @media (min-width: 600px) and (max-width: 900px) {
-#container {
+  #container {
     display: grid;
     grid-template-columns: 200px 200px 200px;
     grid-template-rows: 150px 500px;
@@ -65,18 +99,176 @@ h3 {
     "hd hd hd hd hd hd hd hd"
     "main main main main main main sd sd"
     "ft ft ft ft ft ft ft ft";
-    border: 3px solid black;
+    border: 1.5px solid black;
+  }
+  h1 {
+    color: rgb(0, 0, 0);
+    font-size: 50px;
+  }
+  h2 {
+    font-size: 16px;
+    text-align: center;
+  }
+  h3 {
+    margin: 0px;
+    padding-right: 70%;
+    height: 5px;
+    font-size: 15px;
+  }
+  input {
+    margin: auto;
+    text-align: center;
+    background-color: rgb(43, 214, 226);
+    -moz-border-radius:  5px; /* Firefox */
+    -webkit-border-radius:  5px; /* Safari 4 */
+    border-radius:  5px; /* IE 9, Safari 5, Chrome */
+  }
+  p {
+    text-align: center;
+  }
+  span {
+    text-decoration: underline;
+  }
+  .box {
+    border: 1.5px solid black;
+    background-color: rgb(0, 225, 255);
+  }
+  #header {
+    grid-area: hd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    background-image: url("imgfortitle.jpg");
+    background-size: cover;
+  }
+  #sidebar {
+    grid-area: sd;
+    text-align: center;
+  }
+  #content {
+    grid-area: main;
+    display:flex;
+    flex-direction: column;
+    align-items: auto;
+    justify-content: space-around;
+    font-size: auto;
+    flex-wrap: wrap;
+  }
+  #footer {
+    grid-area: ft;
+    padding-left: 4px;
+    font-size: 10px;
+  }
+  .post { 
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    border: 1.5px solid black;
+    padding: auto;
+    margin: auto;
+    background: rgb(255, 187, 0);
+    width: 260px;
+    height: 130px;
+    box-shadow: 0 -120px 100px -120px crimson inset;
+    animation: background 3s infinite alternate;
+  }
+  .ref {
+    padding-left: 70%;
+    font-size: 10px;
+  }
 }
-}
+/* For wide screens */
 @media (min-width: 901px) {
-    #container {
-        display: grid;
-        grid-template-columns: 300px 300px 300px;
-        grid-template-rows: 150px 600px;
-        grid-template-areas: 
-        "hd hd hd hd hd hd hd hd"
-        "main main main main main main sd sd"
-        "ft ft ft ft ft ft ft ft";
-        border: 3px solid black;
-    }
+  #container {
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: 150px 600px;
+    grid-template-areas: 
+    "hd hd hd hd hd hd hd hd"
+    "main main main main main main sd sd"
+    "ft ft ft ft ft ft ft ft";
+    border: 1.5px solid black;
+  }
+  h1 {
+        color: rgb(0, 0, 0);
+        font-size: 50px;
+  }
+  h2 {
+    font-size: 20px;
+    text-align: center;
+  }
+  h3 {
+    margin: 0px;
+    padding-right: 70%;
+    height: 5px;
+    font-size: 15px;
+  }
+  input {
+    margin: auto;
+    background-color: rgb(43, 214, 226);
+    -moz-border-radius:  5px; /* Firefox */
+    -webkit-border-radius:  5px; /* Safari 4 */
+    border-radius:  5px; /* IE 9, Safari 5, Chrome */
+  }
+  .button {
+    text-align: center;
+  }
+  p  {
+    text-align: center;
+  }
+  span {
+    text-decoration: underline;
+  }
+  .box {
+    border: 1.5px solid black;
+    background-color: rgb(0, 225, 255);
+  }
+  #header {
+    grid-area: hd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    background-image: url("imgfortitle.jpg");
+    background-size: cover;
+  }
+  #sidebar {
+    grid-area: sd;
+    text-align: center;
+  }
+  #content {
+    grid-area: main;
+    display:flex;
+    flex-direction: column;
+    align-items: auto;
+    justify-content: space-around;
+    font-size: auto;
+    flex-wrap: wrap;
+  }
+  #footer {
+    grid-area: ft;
+    padding-left: 50px;
+  }
+  .post { 
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    border: 1.5px solid black;
+    padding: auto;
+    margin: auto;
+    background: rgb(255, 187, 0);
+    width: 400px;
+    height: 150px;
+    box-shadow: 0 -120px 100px -120px crimson inset;
+    animation: background 3s infinite alternate;
+  }
+  .ref {
+    padding-left: 70%;
+    font-size: 15px;
+  }
 }
